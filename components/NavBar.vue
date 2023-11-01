@@ -1,36 +1,119 @@
-<script setup lang=ts>
+<script setup lang="ts">
+
+const nav_links = ref([
+    { id: '/', text: 'home' },
+    { id: '/info', text: 'info' },
+    { id: '/contact', text: 'contact' },
+])
 </script>
 
 <template>
     <nav>
-        <h1 data-navLink data-white>
+        <NuxtLink to="/" data-black data-navLink>
             MH
-        </h1>
+        </NuxtLink>
 
-        <main>
-            <NuxtLink to="/" data-navLink>home</NuxtLink>
-            <NuxtLink to="/about" data-navLink>about us</NuxtLink>
-            <NuxtLink to="/contact" data-navLink>contact</NuxtLink>
-        </main>
+        <div class="nav-links">
+            <NuxtLink v-for="link in nav_links" :to="link.id">
+                {{ link.text }}
+            </NuxtLink>
+        </div>
+
+        <div class="placeholder">
+        </div>
     </nav>
 </template>
 
-<style scoped lang=scss>
+<style lang=scss scoped>
 nav {
-    width: 100%;
-    background-color: black;
+    padding: 2rem;
     display: flex;
+    font-family: 'Roboto', sans-serif;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    background-color: #ffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
-    main {
-        display: flex;
-        gap: 2rem;
+
+    a {
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.3);
+        }
     }
 
-    h1 {
-        margin: auto 0;
+    .nav-logo {
+        height: 80px;
+    }
+
+    .nav-links {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+
+        a {
+            transition: 0.5s ease-in-out;
+            font-size: 1.2rem;
+            text-transform: lowercase;
+            text-decoration: none;
+            color: #000;
+
+            &:hover {
+                color: #000;
+                transform: scale(1.3);
+            }
+
+            &::after {
+                content: '';
+                transition: width .3s ease-in-out;
+                border-radius: 1rem;
+                display: block;
+                width: 0;
+                height: 2px;
+                background: #000;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        &:has(a.router-link-exact-active) {
+            a.router-link-exact-active {
+                color: #000;
+                transform: scale(1.3);
+
+                &:after {
+                    width: 100%
+                }
+            }
+        }
+    }
+
+    .placeholder {
+        width: 80px;
+        background-color: transparent;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: auto;
+
+        .nav-logo {
+            height: 60px;
+        }
+
+        .nav-links {
+            a {
+                font-size: 1rem;
+            }
+        }
     }
 }
 </style>
