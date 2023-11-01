@@ -26,7 +26,7 @@ const nav_links = ref([
 
 <style lang=scss scoped>
 nav {
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     font-family: 'Roboto', sans-serif;
     justify-content: space-between;
