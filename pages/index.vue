@@ -3,11 +3,9 @@
 </script>
 
 <template>
-    <NuxtLayout>
-        <NavBar/>
-        <NuxtPage/>
-    </NuxtLayout>
+    
 </template>
 
 <style scoped lang=scss>
+
 </style>
