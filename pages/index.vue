@@ -4,8 +4,6 @@
 
 <template>
     <main>
-        <img src="/search-engine.svg" alt="Search-engine">
-        <h1>Hello</h1>
     </main>
 </template>
 

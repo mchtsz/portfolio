@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const nav_links = ref([
     { id: '/', text: 'hjem' },
     { id: '/info', text: 'info' }
@@ -49,10 +48,6 @@ nav {
         }
     }
 
-    .nav-logo {
-        height: 80px;
-    }
-
     .nav-links {
         display: flex;
         width: 100%;
@@ -98,11 +93,6 @@ nav {
             }
         }
     }
-
-    .placeholder {
-        width: 80px;
-        background-color: transparent;
-    }
 }
 
 
@@ -110,13 +100,20 @@ nav {
     nav {
         height: auto;
 
-        .nav-logo {
-            height: 60px;
+        .nav-links {
+            justify-content: space-evenly;
+            a {
+                font-size: 1.4rem;
+            }
         }
 
-        .nav-links {
-            a {
-                font-size: 1rem;
+        a {
+            img {
+                display: none;
+            }
+
+            &[data-navLink] {
+                display: none;
             }
         }
     }
