@@ -1,9 +1,8 @@
 <script setup lang="ts">
 
 const nav_links = ref([
-    { id: '/', text: 'home' },
-    { id: '/info', text: 'info' },
-    { id: '/contact', text: 'contact' },
+    { id: '/', text: 'hjem' },
+    { id: '/info', text: 'info' }
 ])
 </script>
 
@@ -19,8 +18,9 @@ const nav_links = ref([
             </NuxtLink>
         </div>
 
-        <div class="placeholder">
-        </div>
+        <a href="https://github.com/mchtsz" target="_blank">
+            <img src="/github.png" alt="github">
+        </a>
     </nav>
 </template>
 
@@ -41,6 +41,10 @@ nav {
 
         &:hover {
             transform: scale(1.3);
+        }
+
+        img {
+            height: 40px;
         }
     }
 
