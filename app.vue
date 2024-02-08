@@ -1,6 +1,14 @@
 <script setup lang=ts>
+const route = useRoute()
+let currentPageName: any = route.name
+
+if (currentPageName === "index") {
+  currentPageName = "hjem"
+}
+
 useHead({
-link: [{ rel: 'icon', type: 'image/png', href: 'logo.svg' }]
+  title: currentPageName + " | Portfolio",
+  link: [{ rel: 'icon', type: 'image/png', href: 'logo.svg' }]
 })
 </script>
 

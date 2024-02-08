@@ -44,6 +44,7 @@ nav {
         }
 
         img {
+            margin: auto;
             height: 40px;
         }
     }
