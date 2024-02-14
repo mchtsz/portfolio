@@ -1,56 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 body,
 * {
-    font-family: 'Lato', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
-    &[data-navLink] {
-        font-weight: 700;
-        font-size: 30px;
-    }
+  &[data-navLink] {
+    font-weight: 700;
+    font-size: 30px;
+  }
 
-    &[data-white] {
-        color: #fff;
-    }
+  &[data-white] {
+    color: #fff;
+  }
 
-    &[data-black] {
-        color: #000;
-    }
+  &[data-black] {
+    color: #000;
+  }
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+  opacity: 0.8;
 }
 
 h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+b {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 a {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #000;
-    text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+}
+
+.darkblue {
+  width: 150px;
+  height: 5px;
+  background-color: #263a47;
+  border: none;
+}
+
+.lightblue {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #98a9be;
+  border: none;
+  width: 250px;
+}
+
+.blackbar {
+  height: 15px;
+  border-radius: 5px;
+  background-color: #d9d9d922;
+  border: none;
 }
