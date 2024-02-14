@@ -102,9 +102,6 @@ nav {
 
         .nav-links {
             justify-content: space-evenly;
-            a {
-                font-size: 1.4rem;
-            }
         }
 
         a {
