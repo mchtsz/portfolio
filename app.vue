@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Analytics from "@vercel/analytics";
+
 useHead({
   link: [{ rel: 'icon', type: 'image/png', href: 'logo.svg' }]
 })
@@ -8,6 +10,7 @@ useHead({
   <NuxtLayout>
     <NavBar />
     <NuxtPage />
+    <Analytics />
   </NuxtLayout>
 </template>
 
