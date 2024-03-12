@@ -21,8 +21,23 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
-		
 	</body>
 </html>
+
 <style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+	:root {
+		--font-family: 'Comfortaa', cursive;
+		--font-size: 16px;
+		--line-height: 1.5;
+		--color-primary: #333;
+		--color-secondary: #fff;
+		--color-accent: #f00;
+	}
+	
+	body, * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
 </style>
