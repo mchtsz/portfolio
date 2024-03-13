@@ -1,13 +1,48 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+const email = "post@marthin.no";
 ---
 
-<Layout title='Kontakt meg | Portfolio'>
-    <main>
-     
-    </main>
+<Layout title="Kontakt meg | Portfolio">
+  <main>
+    <a href=`mailto:${email}`>
+      <div class="mail">
+        <h1>Kontakt meg</h1>
+        <p>Send meg en e-post på <span>{email}</span></p>
+      </div>
+    </a>
+  </main>
 </Layout>
 
-<style>
+<style lang="scss">
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .mail {
+      opacity: 0.8;
+      transition: 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      width: 500px;
+      height: 300px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 1.2;
+      }
+    }
+  }
 </style>

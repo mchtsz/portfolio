@@ -18,16 +18,36 @@ const profile = ref({
             </button>
         </a>
     </section>
+    <div class="coding">
+        <img src="../../public/koding.svg" alt="koding">
+    </div>
 </template>
 
 <style scoped lang=scss>
+.coding {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    z-index: -1;
+    height: 100vh;
+    img {
+        width: 300px;
+        object-fit: fill;
+    }
+
+}
 section {
     display: flex;
+    background: transparent;
+    position: absolute;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     font-family: var(--font-family);
-    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
     gap: 1rem;
     height: 100vh;
 
@@ -54,7 +74,7 @@ section {
 
         &:hover {
             opacity: 0.8;
-            transform: scale(1.1)
+            transform: scale(1.1);
         }
     }
 }
