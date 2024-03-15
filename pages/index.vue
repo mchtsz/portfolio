@@ -6,6 +6,27 @@ const profile = ref({
 	title: "Developer",
 	btntext: "post@marthin.no",
 });
+
+useHead({
+	title: "Portfolio | Marthin Hatland",
+	meta: [
+		{
+			name: "description",
+			content: "This is a portfolio website made with NuxtJS.",
+		},
+		{
+			name: "author",
+			content: "Marthin Hatland",
+		},
+		{
+			name: "keywords",
+			content: "portfolio, nuxtjs, marthin, hatland",
+		},
+		{
+			charset: "UTF-8",
+		}
+	],
+});
 </script>
 
 <template>
@@ -75,7 +96,7 @@ main {
 	.center {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 1.5rem;
 		text-align: center;
 		align-items: center;
 		width: 100%;
@@ -102,13 +123,14 @@ main {
 @media screen and (max-width: 1000px) {
 	main {
 		.center {
-			gap: 0;
+			gap: 1rem;
 			h1 {
 				font-size: 2.5rem;
 				line-height: 4rem;
 			}
 			p {
 				font-size: 2rem;
+				padding-bottom: 1rem;
 			}
 		}
 	}
