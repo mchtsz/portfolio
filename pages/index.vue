@@ -124,12 +124,13 @@ main {
 	main {
 		.center {
 			gap: 1rem;
+			padding-bottom: 6rem;
 			h1 {
-				font-size: 2.5rem;
+				font-size: 2rem;
 				line-height: 4rem;
 			}
 			p {
-				font-size: 2rem;
+				font-size: 1.5rem;
 				padding-bottom: 1rem;
 			}
 		}
