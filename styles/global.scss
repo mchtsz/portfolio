@@ -9,6 +9,16 @@ body, * {
         background-color: #1a1a1a;
         color: #fff;
     }
+
+    &[data-transparent] {
+        background: transparent;
+        border: 1px solid #ccc;
+    }
+
+    &[data-btndark] {
+        background-color: #1a1a1a;
+        border: none;
+    }
 }
 
 h1 {
@@ -19,6 +29,6 @@ p {
     font-weight: 500;
 }
 
-img {
-    filter: none;
+img, * {
+    filter: none!important;
 }

@@ -4,7 +4,7 @@ const defaultMode = ref(true);
 const profile = ref({
 	name: "Marthin Hatland",
 	title: "Developer",
-	btntext: "Kontakt meg",
+	btntext: "post@marthin.no",
 });
 </script>
 
@@ -17,18 +17,18 @@ const profile = ref({
 		<div class="center">
 			<h1>{{ profile.name }}</h1>
 			<p>{{ profile.title }}</p>
-			<NuxtLink to="/kontakt">
-				<button>{{ profile.btntext }}</button>
-			</NuxtLink>
+			<a href="mailto:post@marthin.no">
+				<button data-btndark>{{ profile.btntext }}</button>
+			</a>
 		</div>
 	</main>
 	<main data-dark v-else>
 		<div class="center">
 			<h1>{{ profile.name }}</h1>
 			<p>{{ profile.title }}</p>
-			<NuxtLink to="/kontakt">
-				<button>{{ profile.btntext }}</button>
-			</NuxtLink>
+			<a href="mailto:post@marthin.no">
+				<button data-transparent>{{ profile.btntext }}</button>
+			</a>
 		</div>
 	</main>
 	<div class="person">
@@ -88,10 +88,7 @@ main {
 		button {
 			border-radius: 2rem;
 			padding: 1rem 2rem;
-			width: 200px;
 			font-size: 1.2rem;
-			border: none;
-			background-color: #000;
 			color: #fff;
 			cursor: pointer;
 			
