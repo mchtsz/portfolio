@@ -3,31 +3,29 @@
 // https://fonts.google.com/icons
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/styles/global.scss'],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
+  css: ["~/styles/global.scss"],
   ssr: false,
-  modules: [
-    'nuxt-quasar-ui'
-  ],
-  quasar: { 
+  modules: ["nuxt-quasar-ui"],
+  quasar: {
     config: {
       brand: {
-        primary: '#FF5722',
-        secondary: '#03A9F4',
-        accent: '#00BCD4',
-        dark: '#212121',
-        positive: '#4CAF50',
-        negative: '#FF5252',
-        info: '#2196F3',
-        warning: '#FFC107',
-      }
+        primary: "#FF5722",
+        secondary: "#03A9F4",
+        accent: "#00BCD4",
+        dark: "#212121",
+        positive: "#4CAF50",
+        negative: "#FF5252",
+        info: "#2196F3",
+        warning: "#FFC107",
+      },
     },
 
-    iconSet: 'material-symbols-rounded',
+    iconSet: "material-symbols-rounded",
     extras: {
-      svgIcons: [
-        "material-symbols-rounded",
-      ]
-    }
-
-  }
-})
+      svgIcons: ["material-symbols-rounded"],
+    },
+  },
+});
