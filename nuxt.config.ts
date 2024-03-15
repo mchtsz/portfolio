@@ -3,9 +3,6 @@
 // https://fonts.google.com/icons
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
-  },
   css: ["~/styles/global.scss"],
   ssr: false,
   modules: ["nuxt-quasar-ui"],
