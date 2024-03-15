@@ -137,7 +137,7 @@ main {
 	}
 	.person {
 		img {
-			width: 150px;
+			width: 120px;
 		}
 	}
 }
