@@ -75,8 +75,10 @@ useHead({
 	cursor: pointer;
 	
 	img {
+		animation: spin 4s linear infinite;
 		&:hover {
-			animation: spin 2s linear infinite;
+			
+			animation-play-state: paused;
 		}
 	}
 }
