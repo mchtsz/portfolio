@@ -1,0 +1,7 @@
+# START nuxt-simple-robots (indexable)
+User-agent: *
+Allow: /
+Disallow: 
+
+Sitemap: https://www.marthin.no/sitemap.xml
+# END nuxt-simple-robots
